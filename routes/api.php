@@ -2,8 +2,8 @@
 
 Route::group(['prefix' => 'v2/auth', 'middleware' => ['app_language']], function() {
 
-    Route::post('login', 'Api\V2\AuthController@login');
-    Route::post('signup', 'Api\V2\AuthController@signup');
+    Route::get('login', 'Api\V2\AuthController@login');
+    Route::get('signup', 'Api\V2\AuthController@signup');
     Route::post('social-login', 'Api\V2\AuthController@socialLogin');
     Route::post('password/forget_request', 'Api\V2\PasswordResetController@forgetRequest');
     Route::post('password/confirm_reset', 'Api\V2\PasswordResetController@confirmReset');

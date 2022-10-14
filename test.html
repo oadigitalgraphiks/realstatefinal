@@ -7,10 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-
-
-     
     <script>  
+
+    async function start(){
+
+        await fetch("http://localhost/onlinepropertylive/api/v2/auth/login?email=test1@gmail.com&password=123321", {
+            method: "get",
+          //  headers: { "Content-Type": "multipart/form-data" },
+           
+        }).then( async (response) =>{ 
+            //let data = await response.json();
+            console.log(response);
+        })
+
+   
+    
+
+    }
+
+
+    start();
+
+       
+
+
+
         function showMessage(messageHTML) {
             $('#chat-box').append(messageHTML);
         }

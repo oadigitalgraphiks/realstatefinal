@@ -165,6 +165,8 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
+
+       
                 
         $validator = Validator::make($request->all(),[
            'email' => 'required|string|email',
@@ -201,7 +203,7 @@ class AuthController extends Controller
         $token = $user->createToken('API Token')->plainTextToken;
         return response()->json([
             'message' => translate('Successfully logged in'),
-            'data' => $token
+            'data' =>$token,
         ]);
 
 
